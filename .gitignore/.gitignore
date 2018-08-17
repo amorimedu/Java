@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vetor1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ *
+ * @author eduardo.amorim
+ */
+public class Vetor1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner teclado = new Scanner(System.in);
+            
+        int valor[]= {3,2,6,17,5,4};
+        System.out.println("A lista original é "+ Arrays.toString(valor));
+        System.out.println(" ");
+           
+        System.out.print("Deseja continuar? S/n ");
+        String von = teclado.nextLine(); 
+        
+        while ("S".equals(von)){
+            
+            Arrays.sort(valor);
+            System.out.println("A lista na órdem é: "+Arrays.toString(valor));
+            System.out.print("Qual o valor que deseja saber a posição? ");
+            int d = teclado.nextInt();
+            int pos = Arrays.binarySearch(valor, d);
+            System.out.println("O valor desejado foi "+ d + " a posição dele é: "+(pos+1));
+            
+            }
+
+            
+            
+                
+            
+            
+        
+    }
+    
+}
+
